@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión Legal Integral – Asesoramiento Jurídico en CABA</title>
+<meta name="description" content="Defendemos tus derechos con ética, transparencia y enfoque humano. Derecho Laboral, Amparos de Salud, Derecho de Consumo, Sucesiones, Divorcios y Cuota Alimentaria en CABA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   RESET
+   ═══════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Roboto Flex',sans-serif;font-size:16px;color:#5a5a5a;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit;transition:.3s}
+ul,ol{list-style:none}
+h1,h2,h3,h4,h5,h6{font-family:'DM Serif Text',Georgia,serif;font-weight:400;line-height:1.12;color:var(--navy)}
+button{font-family:inherit;cursor:pointer;-webkit-appearance:none;appearance:none;background-color:transparent;border:none;border-radius:0;color:inherit;padding:0}
+
+/* ═══════════════════════════════════════════════════
+   TOKENS
+   ═══════════════════════════════════════════════════ */
+:root{
+  --navy:#0a1628;
+  --navy-mid:#132744;
+  --navy-light:#1b3660;
+  --gold:#c4a265;
+  --gold-h:#b08c48;
+  --gold10:rgba(196,162,101,.1);
+  --gold20:rgba(196,162,101,.2);
+  --cream:#f8f5ef;
+  --cream-d:#eee8da;
+  --white:#fff;
+  --txt:#5a5a5a;
+  --txt-lt:#999;
+  --bdr:#e5e0d5;
+  --mw:1200px;
+  --hh:80px;
+  --rad:6px;
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════ */
+.gc{max-width:var(--mw);margin:0 auto;padding:0 32px;width:100%}
+.lbl{font-family:'Roboto Flex',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:14px;margin-bottom:16px}
+.lbl::before{content:'';width:32px;height:1.5px;background:var(--gold)}
+.st{font-size:clamp(28px,4vw,46px);color:var(--navy);margin-bottom:16px;max-width:580px}
+.sd{font-size:16px;line-height:1.85;color:var(--txt);max-width:520px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;padding:16px 34px;border:none;cursor:pointer;transition:.4s;border-radius:0}
+.btn-g{background:var(--gold);color:#fff}
+.btn-g:hover{background:var(--gold-h);transform:translateY(-3px);box-shadow:0 12px 35px rgba(196,162,101,.35)}
+.btn-o{background:transparent;color:var(--gold);border:1.5px solid var(--gold)}
+.btn-o:hover{background:var(--gold);color:#fff;transform:translateY(-3px)}
+.btn-n{background:var(--navy);color:#fff}
+.btn-n:hover{background:var(--navy-mid);transform:translateY(-3px);box-shadow:0 12px 35px rgba(10,22,40,.3)}
+.btn .arr{transition:transform .3s}.btn:hover .arr{transform:translateX(5px)}
+
+/* Scroll animations */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+.rv.v{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+
+/* ═══════════════════════════════════════════════════
+   HEADER
+   ═══════════════════════════════════════════════════ */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--hh);transition:.45s}
+.hdr-i{display:flex;align-items:center;justify-content:space-between;height:100%}
+.hdr--t{background:transparent}
+.hdr--s{background:rgba(10,22,40,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 30px rgba(0,0,0,.12)}
+.logo{display:flex;align-items:center}
+.logo img{height:150px;width:auto;margin:-45px 0 -55px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:13px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:.5px;padding:6px 0;position:relative;transition:.3s}
+.nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:.3s}
+.nav a:hover{color:#fff}.nav a:hover::after{width:100%}
+.nav-c{background:var(--gold)!important;color:#fff!important;padding:10px 22px!important;font-weight:700!important;letter-spacing:1.5px!important;text-transform:uppercase!important;font-size:11px!important;border:none!important;border-radius:0!important}
+.nav-c::after{display:none!important}
+.nav-c:hover{background:var(--gold-h)!important;box-shadow:0 4px 18px rgba(196,162,101,.4)}
+.brgr{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;z-index:1001}
+.brgr span{display:block;width:26px;height:2px;background:#fff;transition:.3s}
+.mnav{display:none;position:fixed;inset:0;background:rgba(10,22,40,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+.mnav.open{display:flex}
+.mnav a{font-family:'DM Serif Text',serif;font-size:24px;color:#fff;transition:.3s}
+.mnav a:hover{color:var(--gold)}
+
+/* ═══════════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════════ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;padding-top:var(--hh)}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(125deg,rgba(10,22,40,.97),rgba(10,22,40,.8) 50%,rgba(10,22,40,.5));z-index:1}
+.hero-bg{position:absolute;inset:0;background:url('https://files.catbox.moe/wmeuu3.png') center/cover;opacity:.35}
+.hero-g{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:80px 0}
+.hero-c{opacity:0;transform:translateY(30px);animation:fu .85s .35s forwards}
+.hero-im{position:relative;opacity:0;transform:translateX(30px);animation:fl .85s .65s forwards}
+.hero-pill{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.hero-pill::before{content:'';width:28px;height:1.5px;background:var(--gold)}
+.hero h1{font-size:clamp(34px,5vw,56px);color:#fff;line-height:1.06;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-d{font-size:16px;line-height:1.85;color:rgba(255,255,255,.6);margin-bottom:34px;max-width:440px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+/* hero image */
+.him{position:relative;overflow:hidden;border-radius:var(--rad)}
+.him img,.him video{width:100%;height:560px;object-fit:cover;display:block}
+.him .hero-img-static{display:none!important}
+.him::after{content:'';position:absolute;top:-14px;right:-14px;width:110px;height:110px;border:2px solid var(--gold20);pointer-events:none}
+.hero-dots{position:absolute;bottom:-18px;right:-18px;width:90px;height:90px;background-image:radial-gradient(var(--gold20) 1.5px,transparent 1.5px);background-size:11px 11px}
+
+/* ═══════════════════════════════════════════════════
+   SERVICES — Rich cards with image, number, overlay
+   ═══════════════════════════════════════════════════ */
+.services{padding:110px 0;background:var(--white)}
+.srv-head{text-align:center;margin-bottom:60px}
+.srv-head .st{margin-left:auto;margin-right:auto}
+.srv-head .sd{margin-left:auto;margin-right:auto}
+.srv-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.srv-card{position:relative;overflow:hidden;background:var(--navy);height:420px;cursor:pointer;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.srv-card:hover{transform:translateY(-8px)}
+/* Background image */
+.srv-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.22,1,.36,1);opacity:.35}
+.srv-card:hover .srv-card-bg{transform:scale(1.08);opacity:.2}
+/* Gradient overlay */
+.srv-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,40,.3) 0%,rgba(10,22,40,.85) 60%,rgba(10,22,40,.95) 100%);z-index:1;transition:background .4s}
+/* Number */
+.srv-card-num{position:absolute;top:20px;right:24px;font-family:'DM Serif Text',serif;font-size:64px;color:rgba(255,255,255,.06);z-index:2;line-height:1;transition:color .4s}
+.srv-card:hover .srv-card-num{color:rgba(196,162,101,.15)}
+/* Icon */
+.srv-card-icon{position:absolute;top:25px;left:28px;z-index:2;width:50px;height:50px;background:var(--gold);display:flex;align-items:center;justify-content:center;transition:background .3s}
+.srv-card:hover .srv-card-icon{background:var(--gold-h)}
+.srv-card-icon svg{width:24px;height:24px;fill:#fff}
+/* Content */
+.srv-card-body{position:absolute;bottom:0;left:0;right:0;padding:28px;z-index:2}
+.srv-card h3{font-size:22px;color:#fff;margin-bottom:10px}
+.srv-card p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.6);margin-bottom:16px;max-height:0;overflow:hidden;transition:max-height .5s,opacity .4s;opacity:0}
+.srv-card:hover p{max-height:220px;opacity:1}
+.srv-link{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);display:inline-flex;align-items:center;gap:8px;transition:gap .3s}
+.srv-link:hover{gap:14px}
+.srv-link svg{width:16px;height:16px;fill:currentColor}
+/* Gold line bottom */
+.srv-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--gold);z-index:3;transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.srv-card:hover::after{transform:scaleX(1)}
+
+/* ═══════════════════════════════════════════════════
+   ABOUT — With quote, signature, dual image
+   ═══════════════════════════════════════════════════ */
+.about{padding:110px 0;background:var(--cream)}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img{position:relative}
+.about-img-m{position:relative;overflow:hidden}
+.about-img-m img{width:100%;height:500px;object-fit:cover}
+.about-img::before{content:'';position:absolute;top:20px;left:-20px;width:45%;height:45%;border:2px solid var(--gold);opacity:.12;z-index:0;pointer-events:none}
+.about-exp{position:absolute;bottom:-22px;right:-22px;width:160px;height:160px;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
+.about-exp .en{font-family:'DM Serif Text',serif;font-size:46px;color:var(--gold);line-height:1}
+.about-exp .et{font-size:10px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:2.5px;margin-top:3px;text-align:center}
+.about-cnt .sd{margin-bottom:24px}
+.about-feats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
+.about-f{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--navy)}
+.about-f::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
+/* Quote signature */
+.about-q{margin-top:28px;padding-top:24px;border-top:1px solid var(--bdr)}
+.about-q blockquote{font-family:'DM Serif Text',serif;font-size:17px;font-style:italic;color:var(--navy);line-height:1.55;margin-bottom:14px;padding-left:20px;position:relative}
+.about-q blockquote::before{content:'"';position:absolute;left:0;top:-8px;font-size:34px;color:var(--gold);line-height:1}
+.about-sig{font-family:'DM Serif Text',serif;font-size:26px;color:var(--gold);font-style:italic}
+.about-sig-r{font-size:12px;color:var(--txt-lt);text-transform:uppercase;letter-spacing:2px;margin-top:2px;display:block}
+
+
+
+/* ═══════════════════════════════════════════════════
+   PRACTICE AREAS — Full overlay hover cards
+   ═══════════════════════════════════════════════════ */
+.prac{padding:110px 0;background:var(--white)}
+.prac-head{margin-bottom:55px}
+.prac-g{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prac-c{position:relative;overflow:hidden;height:380px;cursor:pointer}
+.prac-c:nth-child(1){grid-column:span 2}
+.prac-c:nth-child(2){grid-column:span 1}
+.prac-c:nth-child(3){grid-column:span 1}
+.prac-c:nth-child(4){grid-column:span 2}
+.prac-c:nth-child(5){grid-column:span 3}
+/* Image */
+.prac-c-img{position:absolute;inset:0}
+.prac-c-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.prac-c:hover .prac-c-img img{transform:scale(1.08)}
+/* Gradient overlay */
+.prac-c::before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,40,.88) 0%,rgba(10,22,40,.35) 50%,rgba(10,22,40,.15) 100%);z-index:1;transition:background .4s}
+.prac-c:hover::before{background:linear-gradient(0deg,rgba(10,22,40,.92) 0%,rgba(10,22,40,.6) 50%,rgba(10,22,40,.4) 100%)}
+/* Content */
+.prac-c-body{position:absolute;bottom:0;left:0;right:0;padding:30px;z-index:2;transform:translateY(20px);transition:transform .4s}
+.prac-c:hover .prac-c-body{transform:translateY(0)}
+.prac-c-body .prac-tag{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;opacity:0;transition:opacity .4s}
+.prac-c:hover .prac-c-body .prac-tag{opacity:1}
+.prac-c-body h3{font-size:24px;color:#fff;margin-bottom:8px;transition:transform .4s}
+.prac-c-body p{font-size:14px;line-height:1.65;color:rgba(255,255,255,.65);max-height:0;overflow:hidden;opacity:0;transition:max-height .5s,opacity .4s .1s}
+.prac-c:hover .prac-c-body p{max-height:220px;opacity:1}
+/* Arrow */
+.prac-c-arr{position:absolute;top:22px;right:22px;width:46px;height:46px;background:var(--gold);display:flex;align-items:center;justify-content:center;z-index:2;opacity:0;transform:translateY(8px) rotate(-45deg);transition:all .4s}
+.prac-c:hover .prac-c-arr{opacity:1;transform:translateY(0) rotate(0)}
+.prac-c-arr svg{width:18px;height:18px;fill:#fff}
+/* Gold accent bar */
+.prac-c::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);z-index:3;transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.prac-c:hover::after{transform:scaleX(1)}
+
+/* ═══════════════════════════════════════════════════
+   WHY US — TABS (fixed styling, no pink!)
+   ═══════════════════════════════════════════════════ */
+.why{padding:110px 0;background:var(--cream)}
+.why-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.why-img{position:relative;overflow:hidden}
+.why-img img{width:100%;height:460px;object-fit:cover}
+.why-img-badge{position:absolute;bottom:20px;left:20px;background:var(--navy);padding:18px 22px;z-index:2;display:flex;align-items:center;gap:12px}
+.why-img-badge svg{width:28px;height:28px;fill:var(--gold)}
+.why-img-badge span{font-family:'DM Serif Text',serif;font-size:14px;color:#fff;line-height:1.3}
+
+/* Tabs */
+.tn{display:flex;gap:0;margin-bottom:28px;border-bottom:2px solid var(--bdr)}
+.tb{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:14px 24px;background-color:transparent!important;background:transparent!important;border:none!important;color:var(--txt-lt);position:relative;transition:color .3s;-webkit-appearance:none!important;appearance:none!important;outline:none}
+.tb::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .35s}
+.tb.on{color:var(--navy);background:transparent!important;background-color:transparent!important}
+.tb.on::after{transform:scaleX(1)}
+.tb:hover{color:var(--navy)}
+.tb:focus{outline:none}
+.tp{display:none;animation:fu .45s ease}
+.tp.on{display:block}
+.tp h3{font-size:26px;margin-bottom:12px}
+.tp>p{font-size:15px;line-height:1.85;color:var(--txt);margin-bottom:18px}
+.tl li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--navy);padding:7px 0;font-weight:500}
+.tl li::before{content:'';width:7px;height:7px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+
+
+/* ═══════════════════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════════════════ */
+.cta{padding:100px 0;background:var(--cream);position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;right:-50px;bottom:-50px;width:220px;height:220px;border:2px solid var(--gold);opacity:.06;border-radius:50%}
+.cta-i{text-align:center}
+.cta-i .st{margin-left:auto;margin-right:auto;max-width:620px}
+.cta-i .sd{margin-left:auto;margin-right:auto;margin-bottom:30px}
+
+/* ═══════════════════════════════════════════════════
+   CONTACT
+   ═══════════════════════════════════════════════════ */
+.contact{padding:110px 0;background:var(--white)}
+.co-g{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.co-info{display:flex;flex-direction:column;gap:24px;margin-top:24px}
+.ci{display:flex;align-items:flex-start;gap:16px}
+.ci-ico{width:46px;height:46px;background:var(--gold10);display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:var(--rad)}
+.ci-ico svg{width:20px;height:20px;fill:var(--gold)}
+.ci h4{font-family:'Roboto Flex',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--txt-lt);margin-bottom:3px}
+.ci p,.ci a{font-size:15px;color:var(--navy);font-weight:500}
+.ci a:hover{color:var(--gold)}
+.cf{background:var(--cream);padding:44px;border-radius:var(--rad)}
+.cf h3{font-size:26px;margin-bottom:20px}
+.fg{margin-bottom:16px}
+.fg input,.fg textarea{width:100%;padding:14px 18px;border:1px solid var(--bdr);background:#fff;font-family:'Roboto Flex',sans-serif;font-size:14px;color:var(--navy);transition:border-color .3s;outline:none;border-radius:var(--rad)}
+.fg input:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg textarea{min-height:110px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════ */
+.ftr{background:var(--navy);padding:75px 0 0}
+.ftr-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ftr-b{max-width:280px}
+.ftr-l{margin-bottom:16px}
+.ftr-l img{height:140px;width:auto;margin:-40px 0}
+.ftr-b p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.45)}
+.ftr h4{font-family:'Roboto Flex',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#fff;margin-bottom:20px}
+.ftr-lk{display:flex;flex-direction:column;gap:10px}
+.ftr-lk a{font-size:13px;color:rgba(255,255,255,.45);transition:.3s}
+.ftr-lk a:hover{color:var(--gold);padding-left:4px}
+.ftr-sc{display:flex;gap:10px;margin-top:16px}
+.ftr-sc a{width:38px;height:38px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:.3s;border-radius:var(--rad)}
+.ftr-sc a:hover{background:var(--gold);border-color:var(--gold)}
+.ftr-sc svg{width:15px;height:15px;fill:rgba(255,255,255,.55)}
+.ftr-sc a:hover svg{fill:#fff}
+.ftr-bot{padding:20px 0;display:flex;align-items:center;justify-content:space-between}
+.ftr-bot p{font-size:12px;color:rgba(255,255,255,.3)}
+
+/* ═══════════════════════════════════════════════════
+   WHATSAPP
+   ═══════════════════════════════════════════════════ */
+.wa{position:fixed;bottom:26px;right:26px;z-index:9999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 22px rgba(37,211,102,.4);transition:transform .3s,box-shadow .3s}
+.wa:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.55)}
+.wa svg{width:28px;height:28px;fill:#fff}
+
+/* ═══════════════════════════════════════════════════
+   KEYFRAMES
+   ═══════════════════════════════════════════════════ */
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fl{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════ */
+@media(max-width:1024px){
+  .hero{display:block!important;min-height:0!important;padding-top:110px!important;padding-bottom:50px!important}
+  .hero-g{grid-template-columns:1fr;text-align:center;padding:0!important}
+  .hero-c{order:1}.hero-im{order:0;max-width:480px;width:100%;margin:0 auto 30px;padding:0 24px}
+  .him img,.him video{height:340px!important}
+  .him .hero-img-static{display:block!important}
+  .hero-vid{display:none!important}
+  .hero-d{margin:0 auto 34px}.hero-btns{justify-content:center}.hero-pill{justify-content:center}
+  .about-g,.why-g,.co-g{grid-template-columns:1fr;gap:50px}
+  .ftr-g{grid-template-columns:repeat(2,1fr)}
+  .nav{display:none}.brgr{display:flex}
+  
+  /* Bento Grid Collapse */
+  .srv-g,.prac-g{grid-template-columns:1fr!important}
+  .srv-card,.prac-c{grid-column:span 1!important}
+  
+  /* Overhaul Mobile: Disable hidden hover content */
+  .srv-card-bg{opacity:.18!important;transform:scale(1.04)!important}
+  .srv-card p{max-height:none!important;opacity:1!important;margin-bottom:16px}
+  .srv-card::after{transform:scaleX(1)!important}
+  
+  .prac-c-body{transform:translateY(0)!important}
+  .prac-c-body .prac-tag{opacity:1!important}
+  .prac-c-body p{max-height:none!important;opacity:1!important}
+  .prac-c-arr{opacity:1!important;transform:translateY(0) rotate(0)!important}
+  .prac-c::before{background:linear-gradient(0deg,rgba(10,22,40,.92) 0%,rgba(10,22,40,.6) 50%,rgba(10,22,40,.4) 100%)!important}
+  .prac-c::after{transform:scaleX(1)!important}
+  .prac-c-img img{transform:scale(1.05)!important}
+}
+@media(max-width:768px){
+  .about-feats{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .ftr-g{grid-template-columns:1fr;gap:28px}
+  .ftr-bot{flex-direction:column;gap:8px;text-align:center}
+  .him img,.him video{height:260px!important}.about-img-m img{height:320px}
+  .tn{flex-wrap:wrap}.tb{padding:10px 16px;font-size:11px}
+  .cf{padding:26px}
+  .srv-card{height:360px}
+  .prac-c{height:320px}
+}
+@media(max-width:480px){
+  .hero h1{font-size:28px}
+  .hero-dots,.him::after{display:none}
+  .about-exp{width:110px;height:110px}.about-exp .en{font-size:34px}
+  .about-img::before{display:none}
+  .why-img-badge{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="hdr hdr--t" id="hdr">
+  <div class="gc hdr-i">
+    <a href="#" class="logo"><img src="https://files.catbox.moe/6km071.png" alt="Gestión Legal Integral"></a>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#areas">Áreas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="brgr" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</header>
+<div class="mnav" id="mnav">
+  <a href="#inicio" onclick="closeNav()">Inicio</a>
+  <a href="#servicios" onclick="closeNav()">Servicios</a>
+  <a href="#nosotros" onclick="closeNav()">Nosotros</a>
+  <a href="#areas" onclick="closeNav()">Áreas</a>
+  <a href="#contacto" onclick="closeNav()">Contacto</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="gc hero-g">
+    <div class="hero-c">
+      <span class="hero-pill">Gestión Legal Integral</span>
+      <h1>Defendemos tus derechos con <em>ética</em> &amp; transparencia</h1>
+      <p class="hero-d">Nos especializamos en acompañar procesos legales con un enfoque humano, transparente y orientado a resultados. Tu tranquilidad es nuestra prioridad.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/5491178219599?text=Hola,%20quiero%20hacer%20una%20consulta%20legal" class="btn btn-g" target="_blank" rel="noopener">Consultá Ahora <span class="arr">→</span></a>
+        <a href="#servicios" class="btn btn-o">Nuestros Servicios</a>
+      </div>
+    </div>
+    <div class="hero-im">
+      <div class="him">
+        <video autoplay loop muted playsinline poster="https://files.catbox.moe/wmeuu3.png" class="hero-vid">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-lawyer-signing-a-document-34280-large.mp4" type="video/mp4">
+        </video>
+        <img src="https://files.catbox.moe/wmeuu3.png" alt="Gestión Legal" class="hero-img-static">
+        <div class="hero-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services" id="servicios">
+  <div class="gc">
+    <div class="srv-head rv">
+      <span class="lbl" style="justify-content:center">Nuestros servicios</span>
+      <h2 class="st">Cómo te acompañamos en tu caso</h2>
+      <p class="sd">Brindamos asesoramiento integral bajo distintas modalidades de atención y gestión legal adaptadas a las necesidades y urgencias de cada cliente.</p>
+    </div>
+    <div class="srv-g">
+      <!-- 1 -->
+      <div class="srv-card rv d1">
+        <div class="srv-card-bg" style="background-image:url('https://files.catbox.moe/gbpzl1.png')"></div>
+        <div class="srv-card-num">01</div>
+        <div class="srv-card-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="#fff"/></svg></div>
+        <div class="srv-card-body">
+          <h3>Asesoramiento Preventivo</h3>
+          <p>Consultas estratégicas personalizadas para anticipar y evitar conflictos judiciales. Te orientamos antes de tomar decisiones críticas o firmar acuerdos, previniendo riesgos futuros.</p>
+          <a href="https://wa.me/5491178219599?text=Consulta%20sobre%20Asesoramiento%20Preventivo" class="srv-link" target="_blank" rel="noopener">Consultar <svg viewBox="0 0 448 512"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"/></svg></a>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="srv-card rv d2">
+        <div class="srv-card-bg" style="background-image:url('https://files.catbox.moe/njhfvl.png')"></div>
+        <div class="srv-card-num">02</div>
+        <div class="srv-card-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#fff"/></svg></div>
+        <div class="srv-card-body">
+          <h3>Mediación y Negociación</h3>
+          <p>Agotamos todas las instancias de resolución de conflictos de forma pacífica y extrajudicial en CABA para conseguir soluciones ágiles, eficaces y de menor costo emocional para vos.</p>
+          <a href="https://wa.me/5491178219599?text=Consulta%20sobre%20Mediacion%20y%20Negociacion" class="srv-link" target="_blank" rel="noopener">Consultar <svg viewBox="0 0 448 512"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"/></svg></a>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="srv-card rv d3">
+        <div class="srv-card-bg" style="background-image:url('https://files.catbox.moe/cq6bb8.png')"></div>
+        <div class="srv-card-num">03</div>
+        <div class="srv-card-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="#fff"/></svg></div>
+        <div class="srv-card-body">
+          <h3>Litigios y Defensa Judicial</h3>
+          <p>Representación firme y estratégica ante los tribunales de CABA en juicios de toda índole. Defendemos tus intereses con la máxima rigurosidad y determinación en cada instancia.</p>
+          <a href="https://wa.me/5491178219599?text=Consulta%20sobre%20Litigios%20y%20Defensa%20Judicial" class="srv-link" target="_blank" rel="noopener">Consultar <svg viewBox="0 0 448 512"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"/></svg></a>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="srv-card rv d4">
+        <div class="srv-card-bg" style="background-image:url('https://files.catbox.moe/r7vmf0.png')"></div>
+        <div class="srv-card-num">04</div>
+        <div class="srv-card-icon"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="#fff"/></svg></div>
+        <div class="srv-card-body">
+          <h3>Trámites y Contratos</h3>
+          <p>Redacción, revisión y firma de contratos comerciales y residenciales. Confección y envío de telegramas colacionados, cartas documento y reclamos administrativos eficientes.</p>
+          <a href="https://wa.me/5491178219599?text=Consulta%20sobre%20Tramites%20y%20Contratos" class="srv-link" target="_blank" rel="noopener">Consultar <svg viewBox="0 0 448 512"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="nosotros">
+  <div class="gc about-g">
+    <div class="about-img rv">
+      <div class="about-img-m"><img src="https://files.catbox.moe/wcdpap.png" alt="Estudio jurídico" loading="lazy"></div>
+    </div>
+    <div class="about-cnt rv">
+      <span class="lbl">Sobre nosotros</span>
+      <h2 class="st">Un equipo comprometido con tus derechos</h2>
+      <p class="sd">Nos especializamos en acompañar procesos legales con un enfoque humano, transparente y orientado a resultados. Creemos que cada persona merece acceso a una defensa legal de calidad y que la confianza es la base de toda relación abogado-cliente.</p>
+      <div class="about-feats">
+        <div class="about-f">Enfoque humano y ético</div>
+        <div class="about-f">Transparencia total</div>
+        <div class="about-f">Orientación a resultados</div>
+        <div class="about-f">Atención personalizada</div>
+      </div>
+      <a href="#contacto" class="btn btn-g">Conocé Más <span class="arr">→</span></a>
+      <div class="about-q">
+        <blockquote>Nuestra experiencia es tu ventaja — eleginos para tener tranquilidad y una resolución exitosa de tu caso.</blockquote>
+        <span class="about-sig">Gestión Legal Integral</span>
+        <span class="about-sig-r">Asesoramiento Jurídico · CABA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ PRACTICE AREAS ═══ -->
+<section class="prac" id="areas">
+  <div class="gc">
+    <div class="prac-head rv">
+      <span class="lbl">Áreas de práctica</span>
+      <h2 class="st">Atención personalizada y defensa efectiva</h2>
+      <p class="sd">Cada caso es único. Brindamos asesoramiento integral en las áreas que más impactan en tu vida cotidiana.</p>
+    </div>
+    <div class="prac-g">
+      <div class="prac-c rv d1">
+        <div class="prac-c-img"><img src="https://files.catbox.moe/jcagcx.png" alt="Laboral" loading="lazy"></div>
+        <div class="prac-c-body">
+          <span class="prac-tag">Laboral</span>
+          <h3>Derecho Laboral</h3>
+          <p>Defensa del trabajador: despidos, trabajo en negro, accidentes laborales, ART y reclamos de indemnización y liquidación final.</p>
+        </div>
+        <div class="prac-c-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="prac-c rv d2">
+        <div class="prac-c-img"><img src="https://files.catbox.moe/bkx38p.png" alt="Salud" loading="lazy"></div>
+        <div class="prac-c-body">
+          <span class="prac-tag">Salud</span>
+          <h3>Amparos de Salud</h3>
+          <p>Medicación costosa, internación geriátrica, coberturas de obras sociales/prepagas, discapacidad y resolución rápida ante temas médicos.</p>
+        </div>
+        <div class="prac-c-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="prac-c rv d3">
+        <div class="prac-c-img"><img src="https://files.catbox.moe/m9l9id.png" alt="Consumo" loading="lazy"></div>
+        <div class="prac-c-body">
+          <span class="prac-tag">Consumo</span>
+          <h3>Derecho de Consumo</h3>
+          <p>Defensa financiera contra tarjetas, embargos indebidos, estafas virtuales/bancarias y disputas por planes de ahorro.</p>
+        </div>
+        <div class="prac-c-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="prac-c rv d4">
+        <div class="prac-c-img"><img src="https://files.catbox.moe/wjstq8.png" alt="Familia" loading="lazy"></div>
+        <div class="prac-c-body">
+          <span class="prac-tag">Familia</span>
+          <h3>Familia &amp; Sucesiones</h3>
+          <p>Divorcio express, cuotas alimentarias atrasadas, regímenes de visitas, tenencia, cuidado de hijos, convivencia y sucesiones.</p>
+        </div>
+        <div class="prac-c-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="prac-c rv d5">
+        <div class="prac-c-img"><img src="https://files.catbox.moe/bhgett.png" alt="Alquileres" loading="lazy"></div>
+        <div class="prac-c-body">
+          <span class="prac-tag">Alquileres</span>
+          <h3>Inmobiliario / Alquileres</h3>
+          <p>Redacción y control de contratos de alquiler, asesoramiento frente a aumentos abusivos, desalojos y conflictos de vivienda en CABA.</p>
+        </div>
+        <div class="prac-c-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US ═══ -->
+<section class="why">
+  <div class="gc why-g">
+    <div class="why-img rv">
+      <img src="http://gestionlegalintegral.com/wp-content/uploads/2026/06/img-whyus-argentina.jpg" alt="Palacio de Tribunales" loading="lazy">
+      <div class="why-img-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <span>Confianza<br>garantizada</span>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="lbl">¿Por qué elegirnos?</span>
+      <h2 class="st">Tu confianza, nuestro compromiso</h2>
+      <div class="tn">
+        <button class="tb on" data-tab="t1">Experiencia</button>
+        <button class="tb" data-tab="t2">Compromiso</button>
+        <button class="tb" data-tab="t3">Resultados</button>
+      </div>
+      <div class="tp on" id="t1">
+        <h3>Años de trayectoria a tu servicio</h3>
+        <p>Contamos con amplia experiencia en diversas ramas del derecho, lo que nos permite brindarte un asesoramiento integral y estratégico para cada situación.</p>
+        <ul class="tl">
+          <li>Especialistas en Derecho Laboral y de Familia</li>
+          <li>Amplio conocimiento en Amparos de Salud</li>
+          <li>Defensa efectiva del consumidor</li>
+        </ul>
+      </div>
+      <div class="tp" id="t2">
+        <h3>Tu caso es nuestra prioridad</h3>
+        <p>Cada cliente es único. Nos dedicamos a entender tu situación particular para diseñar la estrategia legal más adecuada, siempre con respeto y empatía.</p>
+        <ul class="tl">
+          <li>Seguimiento personalizado de cada caso</li>
+          <li>Comunicación constante y transparente</li>
+          <li>Disponibilidad y accesibilidad</li>
+        </ul>
+      </div>
+      <div class="tp" id="t3">
+        <h3>Enfocados en soluciones reales</h3>
+        <p>Trabajamos con honestidad y dedicación para alcanzar los mejores resultados posibles en cada caso.</p>
+        <ul class="tl">
+          <li>Alta tasa de resoluciones favorables</li>
+          <li>Estrategias legales innovadoras</li>
+          <li>Negociación y mediación efectiva</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ CTA ═══ -->
+<section class="cta">
+  <div class="gc cta-i">
+    <h2 class="st rv">¿Necesitás asesoramiento legal? Estamos para ayudarte</h2>
+    <p class="sd rv">Contanos tu situación y te asesoramos sin compromiso. Nuestro equipo está listo para acompañarte en cada paso.</p>
+    <a href="https://wa.me/5491178219599?text=Hola,%20quiero%20hacer%20una%20consulta%20legal" class="btn btn-n rv" target="_blank" rel="noopener">Escribinos por WhatsApp <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="contacto">
+  <div class="gc co-g">
+    <div class="rv">
+      <span class="lbl">Contacto</span>
+      <h2 class="st">Ponete en contacto con nosotros</h2>
+      <p class="sd">Estamos a tu disposición para escucharte y asesorarte en CABA. Entendemos que enfrentar un conflicto o trámite legal puede ser complejo; por eso, te garantizamos un trato directo, humano y con absoluta transparencia desde el primer contacto. Escribinos para coordinar una primera consulta.</p>
+      <div class="co-info">
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div><h4>Teléfono</h4><a href="tel:+5491178219599">11 7821-9599</a></div></div>
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><div><h4>Email</h4><a href="mailto:gestionlegalintegralinfo@gmail.com">gestionlegalintegralinfo@gmail.com</a></div></div>
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><h4>Ubicación</h4><p>Ciudad Autónoma de Buenos Aires</p></div></div>
+      </div>
+    </div>
+    <div class="cf rv">
+      <h3>Envianos tu consulta</h3>
+      <p style="font-size: 13px; color: var(--txt-lt); margin-bottom: 20px; line-height: 1.5;">Completá tus datos para que un abogado de nuestro equipo analice tu caso de forma personalizada. Tu consulta es totalmente confidencial y te responderemos a la brevedad.</p>
+      <form id="cform" onsubmit="handleSubmit(event)">
+        <div class="frow"><div class="fg"><input type="text" id="fn" placeholder="Tu nombre" required></div><div class="fg"><input type="tel" id="fp" placeholder="Tu teléfono" required></div></div>
+        <div class="fg"><input type="email" id="fe" placeholder="Tu email" required></div>
+        <div class="fg"><input type="text" id="fs" placeholder="Asunto (ej: Consulta laboral)"></div>
+        <div class="fg"><textarea id="fm" placeholder="Contanos tu situación..." required></textarea></div>
+        <button type="submit" class="btn btn-g" style="width:100%;justify-content:center">Enviar Consulta <span class="arr">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="ftr">
+  <div class="gc">
+    <div class="ftr-g">
+      <div class="ftr-b">
+        <div class="ftr-l"><img src="https://files.catbox.moe/6km071.png" alt="Gestión Legal Integral"></div>
+        <p>Nos especializamos en acompañar procesos legales con un enfoque humano, transparente y orientado a resultados. Defendemos tus derechos con ética y respeto.</p>
+        <div class="ftr-sc">
+          <a href="https://www.instagram.com/gestionlegalintegralok" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/share/1CHwF2mbYr/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@gestionlegalintegral?_r=1&_t=ZS-97Mhu52hIff" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.03 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.74-3.94-1.74-.22-.2-.4-.43-.58-.67-.02 2.6-.01 5.2-.02 7.8-.1 1.83-.69 3.73-1.98 5.07-1.4 1.48-3.49 2.29-5.55 2.22-2.19-.07-4.4-1.07-5.59-2.91-1.39-2.07-1.48-5.02-.2-7.17.96-1.68 2.69-2.86 4.62-3.13.01.07.01.15.02.22V13.88c-.64.08-1.3.36-1.74.84-.71.74-.88 1.9-.4 2.8.4.81 1.25 1.37 2.16 1.45.86.08 1.77-.28 2.25-1 .54-.75.56-1.78.55-2.67-.01-5.18-.01-10.36-.01-15.54-.01.07-.01.15-.02.22z"/></svg></a>
+          <a href="mailto:gestionlegalintegralinfo@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+          <a href="https://wa.me/5491178219599" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Áreas de Práctica</h4><div class="ftr-lk"><a href="#areas">Derecho Laboral</a><a href="#areas">Amparos de Salud</a><a href="#areas">Derecho de Consumo</a><a href="#areas">Familia &amp; Sucesiones</a><a href="#areas">Inmobiliario / Alquileres</a></div></div>
+      <div><h4>Navegación</h4><div class="ftr-lk"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#areas">Áreas</a><a href="#contacto">Contacto</a></div></div>
+      <div><h4>Contacto</h4><div class="ftr-lk"><a href="tel:+5491178219599">Tel: 11 7821-9599</a><a href="mailto:gestionlegalintegralinfo@gmail.com">gestionlegalintegralinfo@gmail.com</a><a href="https://www.gestionintegral.com.ar" target="_blank">www.gestionintegral.com.ar</a><a>CABA, Argentina</a></div></div>
+    </div>
+    <div class="ftr-bot"><p>&copy; 2025 Gestión Legal Integral. Todos los derechos reservados.</p><p>Asesoramiento Jurídico en CABA</p></div>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP ═══ -->
+<a href="https://wa.me/5491178219599?text=Hola,%20quiero%20hacer%20una%20consulta%20legal" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- ═══ JS ═══ -->
+<script>
+(function(){
+'use strict';
+var h=document.getElementById('hdr');
+window.addEventListener('scroll',function(){h.className=window.scrollY>60?'hdr hdr--s':'hdr hdr--t'});
+window.toggleNav=function(){document.getElementById('mnav').classList.toggle('open')};
+window.closeNav=function(){document.getElementById('mnav').classList.remove('open')};
+
+// Tabs
+document.querySelectorAll('.tb').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.tb').forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.tp').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');document.getElementById(b.dataset.tab).classList.add('on');
+  });
+});
+
+// Scroll reveal
+var rv=document.querySelectorAll('.rv');
+function ck(){rv.forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight-65)e.classList.add('v')})}
+window.addEventListener('scroll',ck);window.addEventListener('load',ck);
+
+// Form
+window.handleSubmit=function(e){e.preventDefault();var n=document.getElementById('fn').value,p=document.getElementById('fp').value,em=document.getElementById('fe').value,s=document.getElementById('fs').value||'Consulta general',m=document.getElementById('fm').value;window.open('https://wa.me/5491178219599?text=Hola,%20soy%20'+encodeURIComponent(n)+'%0ATel:%20'+encodeURIComponent(p)+'%0AEmail:%20'+encodeURIComponent(em)+'%0AAsunto:%20'+encodeURIComponent(s)+'%0AMensaje:%20'+encodeURIComponent(m),'_blank')};
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=this.getAttribute('href');if(id==='#')return;e.preventDefault();var t=document.querySelector(id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+})();
+</script>
+</body>
+</html>
